@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>mixly</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-frontpage.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">mixly</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" class="navlink">Sign Out</a>
+                    </li>
+                    <!--<li>
+                        <a href="#" class="navlink">&rarr;</a>
+                    </li>-->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Image Background Page Header -->
+    <!-- Note: The background image is set within the business-casual.css file. -->
+    <header class="local-header">
+        
+                    
+                    <div class="tourist-form">
+                    <div class="local-container">
+                            <div class="local-title">Tourists</div>
+                            <div class="local-tagline">Never eat alone<br>
+                            Upcoming locals' destinations</div>
+                            <div class="local-select">
+
+                               <div id="id01"> </div>
+                               <br>
+
+                                
+
+                                <!--<input class="local-accept accept-click" type="submit" value="Accept" onclick="onAccept">
+                                <input class="local-accept" type="submit" value="Reject">-->
+                                
+                            </div>
+                        
+                    </div>
+                    </div>
+               
+      
+    </header>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="test">Copyright &copy; Mixly 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+ <!--<script src="http://code.jquery.com/jquery-1.10.2.js"></script>-->
+ 
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "http://thoughtfox.pythonanywhere.com/touristResults?interest=restaurants&time=0&location=a,2&distance=1";
+
+xmlhttp.onreadystatechange=function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this.responseText);
+    }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(response) {
+    var arr = JSON.parse(response);
+    var i;
+    var out = "<table id=\"resultTable\" class=\"local-results-table\"> <tr><th>Miles</th><th>Locals</th><th>Cuisine</th><th>Restaurant</th><th>Time</th>";
+
+    for(i = 1; i < 5; i++) {
+        var time = arr[i].time;
+        var timeOutput;
+        if (time == 0) {
+           timeOutput = "9am-10am";     
+        }
+        else {
+            timeOutput = "10am-12pm";
+        }
+        out += "<tr><td>" +
+        arr[i].distance +
+        "</td><td>" +
+        arr[i].numberOfLocals +
+        "</td><td>"+
+        arr[i].name +
+        "</td><td>" +
+        arr[i].interest +
+        "</td><td>" +
+        timeOutput +
+        "</td></tr>" ;
+    }
+    out += "</table>";
+    document.getElementById("id01").innerHTML = out;
+}
+
+</script>
+
+
+    <!-- jQuery -->
+   <!--  <script src="js/jquery.js">
+        
+   
+
+    </script> -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

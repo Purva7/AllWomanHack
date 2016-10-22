@@ -1,0 +1,250 @@
+/*
+ * Start Bootstrap - Business Frontpage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    font-style: Helvetica;
+}
+
+nav.navbar.navbar-inverse.navbar-fixed-top {
+    height: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+
+.business-header {
+    height: 400px;
+    background: url('../image/homepage.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.local-header {
+    height: 400px;
+    background: url('../image/local.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.tourist-container {
+    background: url('../image/local.jpg') center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+   
+}
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+    padding-top: 40px;
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+    text-align: center;
+    text-shadow: none !important;
+    font-size: 50px;
+}
+
+.description {
+    margin-top: 0px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+.explore {
+    padding-top: 32px;
+    text-align: center;
+    color: #484848;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.sf-image {
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+.img-center {
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    font-family: "Arial Rounded MT Bold";
+    color: #3387C8 !important;
+    font-size: 28px;
+    background: white;
+    border-radius: 10px;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.navlink:hover {
+    color: black !important;
+}
+
+.who {
+    padding-top: 20px;
+}
+
+.form-input {
+    font-size: 14px;
+}
+
+.landing-form {
+    text-align: center;
+    padding-top: 0px;
+}
+
+.local-form {
+    padding-top: 70px;
+    text-align: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tourist-form {
+    padding-top: 70px;
+    text-align: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.local-container {
+       padding-top: 20px;
+       padding-bottom: 20px;
+       background-color: white;
+      
+}
+
+.local-results-table {
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.local-results-table, .local-results-table th, .local-results-table td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+.local-results-table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+.local-results-table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.tourist-container {
+       padding-top: 20px;
+       padding-bottom: 20px;
+       background-color: white;
+      
+}
+
+.submit-btn {
+    background-color: white;
+    border-radius: 2px;
+    height: 30px;
+    width: 90px;
+    font-size: 14px;
+    box-shadow: none;
+    border: none;
+}
+
+.submit-link {
+    text-decoration: none;
+    color: black;
+}
+
+.submit-link:active, .submit-link:hover, .submit-link:focus {
+    text-decoration: none;
+}
+
+.submit-btn:active, .submit-btn:hover, .submit-btn:focus {
+    background-color: #3387C8;
+    color: white;
+    box-shadow: none;
+    border: none;
+}
+
+.local-submit {
+    background-color: #3387C8;
+    color: white;
+    border-radius: 2px;
+    height: 30px;
+    width: 200px;
+    font-size: 14px;
+    box-shadow: none;
+    border: none;
+}
+
+.local-submit:active, .local-submit:hover, .local-submit:focus {
+    background-color: #3387C8;
+    color: white;
+    box-shadow: none;
+    border: none;
+}
+
+.local-accept {
+    background-color: #3387C8;
+    color: white;
+    border-radius: 2px;
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+    box-shadow: none;
+    border: none;
+}
+
+.local-accept:active, .local-accept:hover, .local-accept:focus {
+    background-color: white;
+    color: black;
+    box-shadow: none;
+    border: 1px gray solid;
+}
+
+.local-title{
+    font-family: "Arial Rounded MT Bold";
+    color: #3387C8 !important;
+    font-size: 20px;
+}
+
+.local-tagline {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.local-select {
+    padding-top: 20px;
+}
+
+.myselect {
+    width: 200px;
+}
+
+footer {
+    /*background-color: black;
+    color: white;*/
+    font-size: 12px;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0px;
+}
